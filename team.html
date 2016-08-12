@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Team</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="border.css">
+  <link href="hover.css" rel="stylesheet" media="all">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="socialmedia.css">
+</head>
+<body>
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+<style>
+p{
+  font-size:18px;
+  }
+
+  body {
+    padding: 40px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+	padding: 40px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+td.class{width: 180px;}
+
+tr:nth-child(even) {
+    background-color:#80002a;
+	color:white;
+}
+
+p{font-family: 'Raleway', sans-serif;}
+nav{font-family: 'Raleway', sans-serif;font-size:18px;}
+table{font-family: 'Raleway', sans-serif;}
+.arvo{font-family: 'Raleway', sans-serif;}
+
+#links{
+  display:inline-block;
+}
+.link1{
+   width: 360px;
+   height: 300px;
+   margin: 8px;
+   padding:50px;
+   background: #b8f0da;
+   display:inline-block;
+   color: #ffffff;
+}
+
+/* unvisited link */
+a:link {
+    color:black;
+}
+
+a:link.change{color:#b8f0da}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: #b8f0da;
+}
+
+/* selected link */
+a:active {
+    color: #b8f0da;
+}
+.img-circle {
+    border-radius: 50%;
+}
+.desc{
+    display:inline-block;
+	margin-left:100px;
+}
+.right{
+	margin-left: 600px;
+}
+/* Wrapper */
+.icon-button {
+	background-color: #80002a;
+	border-radius: 3.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.0rem;
+	height: 3.6rem;
+	line-height: 3.6rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 3.6rem;
+}
+
+/* Circle */
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 3.6rem;
+	height: 3.6rem;
+	border-radius: 3.6rem;
+	margin: -1.8rem;
+}
+.twitter span {
+	background-color: #4099ff;
+}
+.facebook span {
+	background-color: #3B5998;
+}
+.google-plus span {
+	background-color: #db5a3c;
+}
+
+/* Icons */
+.icon-button i {
+	background: none;
+	color: white;
+	height: 3.6rem;
+	left: 0;
+	line-height: 3.6rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 3.6rem;
+	z-index: 10;
+}
+.icon-button .icon-twitter {
+	color: black;
+}
+.icon-button .icon-facebook {
+	color: #3B5998;
+}
+.icon-button .icon-google-plus {
+	color: #db5a3c;
+}
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook,
+.icon-button:hover .icon-google-plus {
+	color: white;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 350px;
+	height: 400px; 
+</style>
+
+<link rel="stylesheet" type="text/css" href="template2.css">
+<nav class="navbar navbar-default navbar-custom navcolor">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	 <a href="index.html">
+        <img alt="Brand" src="blacklogo.png" width="50px" height="50px" style="left:50px;top:50px;">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+ 
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle hvr-underline-from-left" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foreign Policy<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="eupage.html">Trade Agreements</a></li>
+			<li><a href="chinapage.html">What's Going On in China?</a></li>
+			<li><a href="NorthKorea.html">What's Going On in North Korea?</a></li>
+			<li><a href="isispage.html">ISIS and Refugee Crisis</a></li>
+			<li><a href="arabspring.html">How the Arab Spring Affects Us Today</a></li>
+			<li><a href="healthpage.html">Global Health</a></li>
+          </ul>
+        </li>
+      </ul>
+	  
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle hvr-underline-from-left" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Domestic Policy<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="election2016.html">Election 2016</a></li>
+			<li><a href="blacklivesmatterpage.html">Black Lives Matter</a></li>
+			<li><a href="gunpage.html">Gun Violence</a></li>
+			<li><a href="immigrationpage.html">Immigration</a></li>
+			<li><a href="minimumpage.html">Minimum Wage</a></li>
+			<li><a href="environmentpage.html">Environment</a></li>
+          </ul>
+        </li>
+      </ul>
+	   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="contact.html" class="hvr-underline-from-left">Contact Us<span class="sr-only">(current)</span></a></li>
+      
+    </div>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="template2.css">
+<div class="container">
+  <div class="jumbotron">
+    <h1>The Team</h1>
+	<p>Our wonderful team of researchers and coders!</p>
+  </div>
+
+<img class="img-circle circle" src="anna.jpg" width=400px height=300px><h2 class="desc">Annaloisa F.<p>an artsy, funny, and book-loving screenwriter.</p> 
+ <a href="http://twitter.com/minimalmonkey" class="icon-button twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a>
+<a href="http://facebook.com" class="icon-button facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a>
+<a href="http://plus.google.com" class="icon-button google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i>
+<span></span></a>
+</h2><br><br><br>
+
+<img class="img-circle circle" src="karen.jpg" width=350px height=330px><h2 class="desc">Karen P.<p>a sassy, outgoing junior that enjoys wearing combat boots.</p>
+ <a href="http://twitter.com/minimalmonkey" class="icon-button twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a>
+<a href="http://facebook.com" class="icon-button facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a>
+<a href="http://plus.google.com" class="icon-button google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i>
+<span></span></a>
+</h2><br><br><br><br>
+
+<img class="img-circle circle" src="anisha.jpg" width=350px height=330px><h2 class="desc">Anisha N.<p>an intelligent, caring, respectful project manager and junior.</p>
+ <a href="http://twitter.com/minimalmonkey" class="icon-button twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a>
+<a href="http://facebook.com" class="icon-button facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a>
+<a href="http://plus.google.com" class="icon-button google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i>
+<span></span></a>
+</h2><br><br><br><br>
+
+<img class="img-circle circle" src="mia.png" width=300px height=400px><h2 class="desc">Mia J.<p>a sarcastic, fun-loving senior that loves drawing and music.</p>
+ <a href="http://twitter.com/minimalmonkey" class="icon-button twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a>
+<a href="http://facebook.com" class="icon-button facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a>
+<a href="http://plus.google.com" class="icon-button google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i>
+<span></span></a>
+</h2><br><br><br><br>
+
+<img class="img-circle circle" src="amy.jpg" width=300px height=400px><h2 class="desc">Amy W.<p>an artistic, introverted junior that loves coding and horses too.</p>
+ <a href="http://twitter.com/minimalmonkey" class="icon-button twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a>
+<a href="http://facebook.com" class="icon-button facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a>
+<a href="http://plus.google.com" class="icon-button google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i>
+<span></span></a>
+</h2><br><br><br><br>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arab Spring</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="border.css">
+  <link href="hover.css" rel="stylesheet" media="all">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlF4Gg1UBUEd69GGUZJh1zzJlNAvRwbLU&callback=initMap"></script>
+   <script>
+      // In the following example, markers appear when the user clicks on the map.
+      // Each marker is labeled with a single alphabetical character.
+      var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      var labelIndex = 0;
+
+      function initialize() {
+        var egypt = { lat: 26.820553, lng: 30.802498000000014 };
+		var tunisia ={lat:33.886917, lng:9.537499000000025};
+		var yemen ={lat:15.552727, lng:48.516388000000006};
+		var syria={lat: 34.80207499999999, lng:38.99681499999997};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: {lat:29.2985278, lng: 42.55096030000004},
+        });
+
+        // This event listener calls addMarker() when the map is clicked.
+        google.maps.event.addListener(map, 'click', function(event) {
+          addMarker(event.latLng, map);
+        });
+
+        // Add a marker at the center of the map.
+        addMarker(egypt, map);
+	  addMarker(tunisia, map);
+	  addMarker(yemen, map);
+	  addMarker(syria, map);
+      }
+
+      // Adds a marker to the map.
+      function addMarker(location, map) {
+        // Add the marker at the clicked location, and add the next-available label
+        // from the array of alphabetical characters.
+        var marker = new google.maps.Marker({
+          position: location,
+          label: labels[labelIndex++ % labels.length],
+          map: map
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body>
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+<style>
+p{
+  font-size:18px;
+  }
+
+  body {
+    padding: 40px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+	padding: 40px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+.link1:hover{
+	background-color:white;
+}
+
+td.class{width: 180px;}
+
+tr:nth-child(even) {
+    background-color:#b8f0da;
+}
+
+p{font-family: 'Raleway', sans-serif;}
+nav{font-family: 'Raleway', sans-serif;}
+table{font-family: 'Raleway', sans-serif;}
+.arvo{font-family: 'Raleway', sans-serif;}
+
+#links{
+  display:inline-block;
+}
+.link1{
+   width: 360px;
+   height: 300px;
+   margin: 8px;
+   padding:50px;
+   background: #80002a;
+   display:inline-block;
+   color: #ffffff;
+}
+
+/* unvisited link */
+a:link {
+    color:black;
+}
+
+a:link.change{color:#b8f0da}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: #b8f0da;
+}
+
+/* selected link */
+a:active {
+    color: #b8f0da;
+}
+#map {
+        width: 100%;
+        height: 400px;
+      }
+.caption{
+	background-color: #80002a;
+	border-radius:15px;
+	padding: 8px;
+	margin:20px;
+	width: 900px;
+	color:white;
+	text-align:center;
+}
+.white{color:#ffffff;}
+a{font-family: 'Raleway', sans-serif;font-size:18px;}	
+p{font-family: 'Raleway', sans-serif;}
+nav{font-family: 'Raleway', sans-serif;}
+table{font-family: 'Raleway', sans-serif;}
+ul{font-family: 'Raleway', sans-serif;}
+button{font-family: 'Raleway', sans-serif;font-size:18px;background-color:#b8f0da;}
+</style>
+
+<link rel="stylesheet" type="text/css" href="template2.css">
+<nav class="navbar navbar-default navbar-custom navcolor">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	 <a href="index.html">
+        <img alt="Brand" src="blacklogo.png" width="50px" height="50px" style="left:50px;top:50px;">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+ 
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle hvr-underline-from-left" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foreign Policy<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="eupage.html">Trade Agreements</a></li>
+			<li><a href="chinapage.html">What's Going On in China?</a></li>
+			<li><a href="NorthKorea.html">What's Going On in North Korea?</a></li>
+			<li><a href="isispage.html">ISIS and Refugee Crisis</a></li>
+			<li><a href="arabspring.html">How the Arab Spring Affects Us Today</a></li>
+			<li><a href="healthpage.html">Global Health</a></li>
+          </ul>
+        </li>
+      </ul>
+	  
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle hvr-underline-from-left" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Domestic Policy<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="election2016.html">Election 2016</a></li>
+			<li><a href="blacklivesmatterpage.html">Black Lives Matter</a></li>
+			<li><a href="gunpage.html">Gun Violence</a></li>
+			<li><a href="immigrationpage.html">Immigration</a></li>
+			<li><a href="minimumpage.html">Minimum Wage</a></li>
+			<li><a href="environmentpage.html">Environment</a></li>
+          </ul>
+        </li>
+      </ul>
+	   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="contact.html" class="hvr-underline-from-left">Contact Us<span class="sr-only">(current)</span></a></li>
+      
+    </div>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="template2.css">
+<div class="container">
+	
+  <div class="jumbotron">
+    <h1>Arab Spring</h1>
+    <p>These revolutionary protests and uprisings in the Middle East and North Africa, meant to reverse decades of authoritarian regimes in Egypt, Tunisia, Yemen, Syria, Libya, and the Persian Gulf, affect us today. Find out more below.</p>
+  </div>
+  <div id="map"></div>
+  <center><p class="caption">Areas affected by Arab Spring</p></center>
+  <br>
+  
+  <div>
+  <center><img src="mohamed.jpg" alt="mohamed bouazizi" width=60%></center>
+  
+  <center><p class="caption">Mohamed Bouazizi protesting the lack of perspectives in Tunisia by setting himself on fire.</p></center>
+  </div>
+  
+  <br>
+  <p>During 2010, a policewoman allegedly slapped 26-year-old Mohamed Bouazizi in Sidi Bouzid, Tunisia for attempting to sell goods without a permit. In the face of public humiliation, Bouazizi set himself on fire in front of a government building.</p>
+
+  <p>Seeing Bouazizi as martyr, many erupted into protests, demanding President Zine El Abidine Ben Ali and his regime to step down. The president fled the country in 2011, and in response to the success in Tunisia, pro-democracy uprisings defying authoritarian regimes sparked in other areas of the Middle East. This wave of demonstrations and protests became known as <b>Arab Spring.</b></p>
+  <p>Massive demonstrations ignited in Egypt, but as a major turning point in the movement, the Egyptian army refused to use force against the protestors. Without military support, President Hosni Mubarak left office. As a result of international military intervention, Egypt and Yemen remain unstable to this day. Thanks to the fear of intervening in Syria, Syrians have essentially been allowed to freely kill each other in a civil war between Assad’s government and the rebels.</p>
+  <br>
+  <center><img src="syria.jpg" alt="syria" width=60%>
+  <p class="caption">Rebels in Syria against the rule of Assad.</p></center>
+  <br>
+  <p>Overall, Arab Spring failed to replace decades of stable authoritarian regimes with democracies, and political transitions were wracked with instability. Despite partial success in Egypt and Tunisia in overthrowing the dictatorship, no one had agreed on a new, political and economic model to replace the authoritarian regime. Ultimately, Arab Spring served to demonstrate that Arabs are not politically silenced by the ruling elite in the Middle East and will rise up whenever they see fit. However, the bloody situation in the Middle East is still unresolved.</p>
+  <br>
+  <br>
+  <div class="link1">
+  <center><a href="http://www.npr.org/2011/12/17/143897126/the-arab-spring-a-year-of-revolution" width=90%><img src="npr.png" alt="history" width=70%></img></a></center>
+  <br>
+  <br>
+  <p>Link to an article about Arab Spring in Tunisia and Egypt</p>
+  </div>
+  <div class="link1">
+  <center><a href="http://www.cnn.com/2015/03/27/middleeast/arab-spring-aftermath/"><img src="cnn.png" alt="cnn" width=48%></img></a></center>
+  <br>
+  <br>
+  <p>Link to an article discussing the after-effects of Arab Spring</p>
+  </div>
+  <div class="link1">
+  <center><a href="https://www.theguardian.com/books/2016/jan/23/arab-spring-five-years-on-writers-look-back"><img src="guardian.png" alt="guardian" width=80%></img></a></center>
+  <br>
+  <p>Link to an article of reflections by writers across the Arab world on Arab Spring</p>
+  </div>
+  
+ </div>
+ 
+</body>
+</html>

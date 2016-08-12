@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>What's going on in North Korea</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="electioncomparisontable.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="border.css">
+  <link href="hover.css" rel="stylesheet" media="all">
+</head>
+<body>
+<!--add these divs to get the border--><div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+<style>
+p{
+  font-size:18px;
+  }
+  body {
+    padding: 40px;
+}
+.link1:hover{
+	background-color:white;
+}
+#links{
+  display:inline-block;
+  color: #ffffff;
+}
+
+.link1{
+   width: 360px;
+   height: 300px;
+   margin: 8px;
+   padding:50px;
+   background: #80002a;
+   display:inline-block;
+   color: #ffffff;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: #80002a;
+}
+
+/* selected link */
+a:active {
+    color: #80002a;
+}
+
+#map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+
+.caption{
+	background-color:#80002a;
+	border-radius:15px;
+	padding: 8px;
+	margin:20px;
+	width: 900px;
+	color:white;
+	text-align:center;
+}
+
+a{font-family: 'Raleway', sans-serif;font-size:18px;}	
+p{font-family: 'Raleway', sans-serif;}
+nav{font-family: 'Raleway', sans-serif;}
+table{font-family: 'Raleway', sans-serif;}
+ul{font-family: 'Raleway', sans-serif;}
+button{font-family: 'Raleway', sans-serif;font-size:18px;background-color:#80002a;}
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="template2.css">
+<nav class="navbar navbar-default navbar-custom navcolor">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	 <a href="index.html">
+        <img alt="Brand" src="blacklogo.png" width="50px" height="50px" style="left:50px;top:50px;">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+ 
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle hvr-underline-from-left" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foreign Policy<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="eupage.html">Trade Agreements</a></li>
+			<li><a href="chinapage.html">What's Going On in China?</a></li>
+			<li><a href="NorthKorea.html">What's Going On in North Korea?</a></li>
+			<li><a href="isispage.html">ISIS and Refugee Crisis</a></li>
+			<li><a href="arabspring.html">How the Arab Spring Affects Us Today</a></li>
+			<li><a href="healthpage.html">Global Health</a></li>
+          </ul>
+        </li>
+      </ul>
+	  
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle hvr-underline-from-left" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Domestic Policy<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="election2016.html">Election 2016</a></li>
+			<li><a href="blacklivesmatterpage.html">Black Lives Matter</a></li>
+			<li><a href="gunpage.html">Gun Violence</a></li>
+			<li><a href="immigrationpage.html">Immigration</a></li>
+			<li><a href="minimumpage.html">Minimum Wage</a></li>
+			<li><a href="environmentpage.html">Environment</a></li>
+          </ul>
+        </li>
+      </ul>
+	   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="contact.html" class="hvr-underline-from-left">Contact Us<span class="sr-only">(current)</span></a></li>
+      
+    </div>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="template2.css">
+<div class="container">
+  <div class="jumbotron">
+    <h1>North Korea</h1>
+    <p>An overview of North Korea's history and the conditions of its people.</p>
+  </div>
+ 
+  <div id="map"></div>
+  <script>
+       function initMap() {
+        var myLatLng = {lat: 38.0, lng: 126.0};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 6,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'North Korea'
+        });
+      }
+	  
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlF4Gg1UBUEd69GGUZJh1zzJlNAvRwbLU&callback=initMap">
+    </script>
+	 <center><p class="caption">Above is a map of the 38th Parallel (the division between North and South Korea)</p></center>
+	<img src="filler.jpg" style="width:100%">
+	<center><img src="leaders.jpg" alt="leaders" width=70%></center>
+	<br>
+	<br>
+	<p>At the end of WWII, Korea was divided into North Korea, which was under the Communist Soviet Union’s control, and 
+	South Korea, which was under U.S. control. Beginning the long reign of “Kims” in the North, Kim Il-sung became its first 
+	Supreme Leader in 1948, followed by his son Kim Jong-il in 1994 and Sung’s grandson, Kim Jong-un, in 2011.</p>
+	<p>North Korea is the world's only necrocracy, a government that still operates under the rules of a deceased leader.</p>
+	<p>It has 51 social categories in which people are ranked by their loyalty to the regime. For example, those with greater 
+	loyalty live in the main city of Pyongyang and are exempt from mistreatment. On the other hand, those who have broken 
+	the law are executed, and their families are sent to labor camps. </p>
+	<p>Today in North Korea, people are isolated from the outside world. 
+	For instance, their world wide web is restricted to foreigners and a select amount of cities. 
+	To promote a more positive image, the North Korean state television portrays the country as a land of plenty. 
+	These images depict an advanced economy, happy and well-fed children, and shops overflowing with goods. But, on the contrary, 
+	thanks to a famine that killed more than a million North Koreans in the 1990s , ¾ of the population is starving. Because parents 
+	cannot care for their children, homeless orphans live in the streets, trying to stay warm in below-zero weather.</p>
+	
+	<img src="filler.jpg" style="width:100%">
+	<center><img src="kid.jpg" alt="korean child" width=30%></center><img src="filler.jpg" style="width:100%">
+	<center><p>Below are a few longer documentaries on North Korea. Click <a href="https://youtu.be/uGCodBnM2hI?list=UUgRvm1yLFoaQKhmaTqXk9SA"><b>here </b></a>to watch a shorter video on North Korean government.</p></center>
+	<img src="filler2.jpg" style="width:100%">
+	<center><iframe width="900" height="500" src="https://www.youtube.com/embed/DVG4mOgJotY" frameborder="0" allowfullscreen></iframe></center>
+	<br>
+	<center><iframe width="900" height="500" src="https://www.youtube.com/embed/N4aZkwJQKV4" frameborder="0" allowfullscreen></iframe></center>
+    <br>
+	<center><iframe width="900" height="500" src="https://www.youtube.com/embed/ihUOHARC_Og" frameborder="0" allowfullscreen></iframe></center>
+	<img src="filler.jpg" style="width:100%">
+ 
+ 
+ 
+ <center>
+<img src="filler.jpg" style="width:100%">
+  <div class="link1">
+  <center>  
+  <center><a href="http://www.history.com/news/what-you-need-to-know-about-north-korea"><img src="history.png" alt="history" width=49%></img></a></center>
+  <p>Link to more facts on North Korea</p>
+  </div>
+  <div class="link1">
+  <center><a href="http://www.telegraph.co.uk/news/worldnews/asia/northkorea/11138496/Escape-from-North-Korea-How-I-escaped-horrors-of-life-under-Kim-Jong-il.html"><img src="telegraph.jpg" alt="telegraph" width=75%></img></a></center>
+  <p>Link to a the story of an escapee</p>
+  </div>
+  <div class="link1">
+  <center><a href="http://www.libertyinnorthkorea.org/learn-north-korea-history/"><img src="libertyinnorthkorea.png" alt="liberty in north korea" width=26%></img></a></center>
+  <br>
+  <br>
+  <br>
+  <p>Link to an organization that works to help refugees</p>
+  </div>
+</center>
+ </div>
+</body>
+</html>
